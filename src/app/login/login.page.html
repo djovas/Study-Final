@@ -5,7 +5,7 @@
     <h3>O seu portal<br />de estudos online</h3>
   </div>
 
-  <div>
+  <div [formGroup]="loginForm">
     <div class="criar">
       <h3>Fazer Login</h3>
       <!-- <a href="/criar-conta">Criar conta</a> -->
@@ -14,12 +14,27 @@
 
     <div class="dados">
       <ion-item>
-        <ion-input placeholder="E-mail" type="text" [(ngModel)]="email"></ion-input>
+        <ion-input placeholder="E-mail" type="text" formControlName="email"></ion-input>
       </ion-item>
+      <small class="error-message" 
+        *ngIf="loginForm.get('email').touched && loginForm.get('email').errors?.required"
+      >
+        Email is required
+      </small>
+      <small class="error-message" 
+        *ngIf="loginForm.get('email').touched && loginForm.get('email').errors?.email"
+      >
+        Email is invalid
+      </small>
 
       <ion-item>
-        <ion-input placeholder="Senha" type="password" [(ngModel)]="password"></ion-input>
+        <ion-input placeholder="Senha" type="password" formControlName="password"></ion-input>
       </ion-item>
+      <small class="error-message" 
+        *ngIf="loginForm.get('password').touched && loginForm.get('password').errors?.required"
+      >
+        Password is required
+      </small>
 
       <ion-item>
         <ion-label>Lembrar-me</ion-label>

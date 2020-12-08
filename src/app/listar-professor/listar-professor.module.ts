@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { ListarProfessorPageRoutingModule } from './listar-professor-routing.module';
 
 import { ListarProfessorPage } from './listar-professor.page';
+import { IsoDatePipe } from '../pipes/iso-date.pipe';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ListarProfessorPageRoutingModule
+    ListarProfessorPageRoutingModule,
+    IsoDatePipe
   ],
   declarations: [ListarProfessorPage]
 })

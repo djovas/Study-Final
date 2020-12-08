@@ -42,7 +42,8 @@ export class ProfessorService {
           materia: dadosProfessor['materia'],
           telefone: dadosProfessor['telefone'],
           descricao: dadosProfessor['descricao'],
-          horario: dadosProfessor['horario']
+          horario: dadosProfessor['horario'],
+          dataCriacao: dadosProfessor['dataCriacao'],
         };
       }
 

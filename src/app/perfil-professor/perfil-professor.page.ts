@@ -25,7 +25,8 @@ export class PerfilProfessorPage implements OnInit {
     materia: '',
     descricao: '',
     telefone: '',
-    horario: ''
+    horario: '',
+    dataCriacao: ''
     // foto: ''
   };
 
@@ -44,7 +45,10 @@ export class PerfilProfessorPage implements OnInit {
   cadastrar() {
     // this.professor.foto = this.imagemSelecionada;
 
-    this.professorService.cadastrar(this.professor).then((data) => {
+    this.professorService.cadastrar({
+      ...this.professor,
+      dataCriacao: (new Date()).toString()
+    }).then((data) => {
       console.log('Professor cadastrado', data);
 
       this.router.navigateByUrl('/home');

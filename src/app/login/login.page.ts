@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-
-
 import { AutenticacaoService } from 'src/app/services/autenticacao.service';
 
 @Component({
@@ -10,10 +9,9 @@ import { AutenticacaoService } from 'src/app/services/autenticacao.service';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  public email: string = '';
-  public password: string = '';
-
-  constructor(private autenticacao: AutenticacaoService, private router: Router) {
+  loginForm: FormGroup;
+   
+  constructor(private autenticacao: AutenticacaoService, private router: Router, private formBuilder: FormBuilder) {
     // this.autenticacao.logout().then((dados) => {
     //   this.autenticacao.setUsuarioLogado(false);
     // }).catch((erro) => {
@@ -22,10 +20,16 @@ export class LoginPage implements OnInit {
   }
 
   ngOnInit() {
+    this.loginForm = this.formBuilder.group({
+      email: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', Validators.required)
+    });
   }
 
   logar() {
-    this.autenticacao.logar(this.email, this.password).then((resposta) => {
+    const email = this.loginForm.get('email').value;
+    const password = this.loginForm.get('password').value;
+    this.autenticacao.logar(email, password).then((resposta) => {
 
       console.log('resposta', resposta);
 

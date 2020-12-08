@@ -20,7 +20,8 @@ export class ProfessorDetalhesPage implements OnInit {
     materia: '',
     telefone: '',
     descricao: '',
-    horario: ''
+    horario: '',
+    dataCriacao: ''
   };
 
   public form: boolean = false;
@@ -45,7 +46,8 @@ export class ProfessorDetalhesPage implements OnInit {
         materia: professor.materia,
         telefone: professor.telefone,
         descricao: professor.descricao,
-        horario: professor.horario
+        horario: professor.horario,
+        dataCriacao: professor.dataCriacao
       };
 
       this.form = true;

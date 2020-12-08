@@ -48,7 +48,8 @@ export class ListarProfessorPage implements OnInit {
           materia: obj.payload.doc.data()['materia'],
           telefone: obj.payload.doc.data()['telefone'],
           descricao: obj.payload.doc.data()['descricao'],
-          horario: obj.payload.doc.data()['horario']
+          horario: obj.payload.doc.data()['horario'],
+          dataCriacao: obj.payload.doc.data()['dataCriacao']
         };
 
         this.professores.push(professorAux);

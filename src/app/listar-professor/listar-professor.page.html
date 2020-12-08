@@ -29,7 +29,7 @@
 
   <!-- <ion-item *ngFor="let listarProfessor of listarProfessor" routerLink='/listar-professor/{{listarProfessor.id}}'> -->
   <ion-card *ngFor="let listarProfessor of professores" routerLink='/professor-detalhes/{{listarProfessor.id}}'>
-    <img src="assets/giovani.jpg" id="imagem" />
+    <img src="https://img.quizur.com/f/img5c884840a62cc9.48055575.jpg" id="imagem" />
 
     <ion-card-header>
       <ion-card-subtitle>{{listarProfessor.materia}}</ion-card-subtitle>
@@ -37,6 +37,7 @@
     </ion-card-header>
     <ion-card-content>
       {{listarProfessor.descricao}}
+      {{listarProfessor.dataCriacao | isoDate }}
       <ion-button expand="block" slot="end">Ver Horários</ion-button>
     </ion-card-content>
   </ion-card>

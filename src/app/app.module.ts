@@ -14,10 +14,11 @@ import { AngularFirestoreModule } from '@angular/fire/firestore'
 import { AngularFireAuthGuard } from '@angular/fire/auth-guard'
 import { AngularFireAuthModule } from '@angular/fire/auth'
 
-import { firebaseConfig } from './credentials'
+import { firebaseConfig } from './credentials';
+import { IsoDatePipe } from './pipes/iso-date.pipe'
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, IsoDatePipe],
   entryComponents: [],
   imports: [
     BrowserModule,
