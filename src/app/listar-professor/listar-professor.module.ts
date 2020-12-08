@@ -14,9 +14,8 @@ import { IsoDatePipe } from '../pipes/iso-date.pipe';
     CommonModule,
     FormsModule,
     IonicModule,
-    ListarProfessorPageRoutingModule,
-    IsoDatePipe
+    ListarProfessorPageRoutingModule
   ],
-  declarations: [ListarProfessorPage]
+  declarations: [ListarProfessorPage, IsoDatePipe]
 })
 export class ListarProfessorPageModule {}

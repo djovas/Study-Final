@@ -37,8 +37,9 @@ export class ListarProfessorPage implements OnInit {
   constructor(private professorService: ProfessorService) {
 
     this.professorService.getAll().subscribe((professores) => {
+      console.log(professores);
       this.professores = []
-
+      
       for (const obj of professores) {
         let professorAux: Professor;
 

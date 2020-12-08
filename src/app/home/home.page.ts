@@ -11,11 +11,11 @@ export class HomePage {
   constructor(private router: Router) {}
 
   estudar() {
-    this.router.navigateByUrl('/listar-professor')
+    this.router.navigate(['listar-professor'])
   }
 
   darAula() {
-    this.router.navigateByUrl('/login')
+    this.router.navigate(['login'])
   }
 
 }

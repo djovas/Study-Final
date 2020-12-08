@@ -15,10 +15,9 @@ import { AngularFireAuthGuard } from '@angular/fire/auth-guard'
 import { AngularFireAuthModule } from '@angular/fire/auth'
 
 import { firebaseConfig } from './credentials';
-import { IsoDatePipe } from './pipes/iso-date.pipe'
 
 @NgModule({
-  declarations: [AppComponent, IsoDatePipe],
+  declarations: [AppComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
