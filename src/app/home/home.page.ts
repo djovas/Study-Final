@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,6 +8,14 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private router: Router) {}
+
+  estudar() {
+    this.router.navigateByUrl('/listar-professor')
+  }
+
+  darAula() {
+    this.router.navigateByUrl('/login')
+  }
 
 }

@@ -1,0 +1,37 @@
+ion-toolbar {
+    --background: #009acd;
+    font-family: "Archivo", sans-serif;
+  }
+
+  ion-back-button {
+    color: #ffffff;
+  }
+
+  ion-title {
+    color: #ffffff;
+    position: relative;
+  }
+  
+  ion-content {
+    --background: #00bfff;
+  }
+
+  ion-item {
+    --background: #00bfff;
+    min-width: 100%;
+    width: 100%;
+  }
+  
+  ion-button {
+    margin-top: 10px;
+  }
+
+  #imagem {
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 100%;
+    max-width: 30%;
+    max-height: 30%;
+
+    display: flex;
+  }

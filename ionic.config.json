@@ -1,5 +1,7 @@
 {
   "name": "Study-Mobile",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

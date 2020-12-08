@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <!-- <ion-icon name="arrow-back-outline" routerLink="/listar-professor"></ion-icon> -->
+    <ion-title>Detalhes do professor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+
+  <!--<ion-card *ngFor="let listarProfessor of professor" routerLink='/professores/{{listarProfessor.id}}'>-->
+  <ion-card *ngIf="form">
+    <!-- <img src={{listarProfessor.image}} id="imagem" /> -->
+
+    <ion-card-header>
+      <img src="assets/giovani.jpg" alt="perfil" id="imagem">
+      <!-- <ion-card-subtitle>Giovani Duarte</ion-card-subtitle> -->
+      <ion-card-subtitle>{{professor.nome}}</ion-card-subtitle>
+      <ion-card-title>{{professor.materia}}</ion-card-title>
+      <ion-card-subtitle>{{professor.descricao}}</ion-card-subtitle>
+      <!-- <ion-card-subtitle>Horários Disponíveis</ion-card-subtitle> -->
+    </ion-card-header>
+    <ion-card-content class="horarios">
+      <h1>Horários Disponíveis</h1>
+      {{professor.horario}}
+      <br><br>
+      <h1>WhatsApp</h1>
+      {{professor.telefone}}
+    </ion-card-content>
+  </ion-card>
+  <!-- </ion-item> -->
+</ion-content>

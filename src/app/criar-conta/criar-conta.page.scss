@@ -1,0 +1,79 @@
+ion-content {
+    --background: #e8e8e8;
+    border: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Archivo", sans-serif;
+  }
+  
+  .study {
+    background: #00bfff;
+    color: #ffffff;
+    text-align: center;
+  
+    height: 100%;
+    display: block;
+    justify-content: center;
+    height: 50%;
+  }
+  
+  .study h1 {
+    font-family: "Archivo", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    // margin-top: 0;
+    display: block;
+    margin-top: 25%;
+  
+  }
+  
+  .study h3 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .criar {
+    // display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .criar h3 h5 {
+    // color: #32264d;
+    color: #ffffff;
+    margin-top: 30px;
+  }
+  
+  
+  .dados {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  
+    text-align: center;
+
+    padding: 0 2px;
+  }
+  
+  .logar {
+    text-align: center;
+    border: 50px;
+  }
+  
+  .logar ion-button {
+    // --background: #00ee00;
+    --background: #006400;
+  }
+  
+  .voltar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }

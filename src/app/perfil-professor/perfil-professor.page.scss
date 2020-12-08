@@ -1,0 +1,42 @@
+ion-toolbar {
+    --background: #009acd;
+    font-family: "Archivo", sans-serif;
+
+  }
+
+  ion-back-button {
+    color: #ffffff;
+  }
+
+  ion-title {
+    color: #ffffff;
+    position: relative;
+  }
+
+ion-content {
+    --background: #00bfff;
+    border: 0;
+    width: 100%;
+    height: 100%;
+
+    font-family: "Poppins", sans-serif;
+  }
+
+  .foto {
+    margin-left: 25%;
+    width: 50%;
+    height: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    color: #000000;
+  }
+
+  #import{
+    --background: #006400;
+  }
+
+  #concluir {
+    --background: #006400;
+  }

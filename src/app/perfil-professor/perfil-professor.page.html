@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Editar Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="foto">
+    <section>
+      <ion-button id="import" (click)="exibirActionSheet()">Importar Imagem</ion-button>
+    </section>
+
+  </div>
+  <div class="dados">
+    <ion-item>
+      <ion-label position="floating">Nome Completo</ion-label>
+      <ion-input type="text" [(ngModel)]="professor.nome">{{professor.nome}}</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Matéria</ion-label>
+      <ion-select interface="popover" [(ngModel)]="professor.materia">
+        <ion-select-option value="portugues">Português</ion-select-option>
+        <ion-select-option value="matematica">Matemática</ion-select-option>
+        <ion-select-option value="historia">História</ion-select-option>
+        <ion-select-option value="geografia">Geografia</ion-select-option>
+        <ion-select-option value="biologia">Biologia</ion-select-option>
+        <ion-select-option value="quimica">Química</ion-select-option>
+        <ion-select-option value="filosofia">Filosofia/Sociologia</ion-select-option>
+        <ion-select-option value="ingles">Inglês</ion-select-option>
+        <ion-select-option value="espanhol">Espanhol</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">WhatsApp</ion-label>
+      <ion-input type="text" [(ngModel)]="professor.telefone"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Horários Disponíveis</ion-label>
+      <ion-input type="text" [(ngModel)]="professor.horario"></ion-input>
+    </ion-item>
+    <ion-item class="descricao">
+      <ion-label position="floating">Descrição</ion-label>
+      <ion-textarea type="text" [(ngModel)]="professor.descricao"></ion-textarea>
+    </ion-item>
+
+    <div class="concluir">
+      <section>
+        <ion-button id="concluir" expand="block" (click)="cadastrar()">Concluir</ion-button>
+      </section>
+    </div>
+  </div>
+
+</ion-content>

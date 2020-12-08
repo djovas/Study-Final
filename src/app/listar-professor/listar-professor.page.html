@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <!-- <ion-icon name="arrow-back-outline" routerLink="/home"></ion-icon> -->
+    <ion-title>Professores Disponíveis</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-searchbar showCancelButton="never"></ion-searchbar>
+  <!-- <ion-card>
+    <img src="assets/giovani.jpg" />
+
+    <ion-card-header>
+      <ion-card-subtitle>História</ion-card-subtitle>
+      <ion-card-title>Giovani Duarte</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      “Pensar no passado, compreender o presente e idealizar o futuro.” -
+      Heródoto Apaixonado por história desde a época de colégio e mais
+      apaixonado ainda em fazer as pessoas se apaixonarem por história, pois
+      como digo, História não é difícil, você não aprendeu a gostar dela.
+      <ion-button expand="block" slot="end">Ver Horários</ion-button>
+    </ion-card-content>
+  </ion-card> -->
+
+  <!-- <ion-item *ngFor="let listarProfessor of listarProfessor" routerLink='/listar-professor/{{listarProfessor.id}}'> -->
+  <ion-card *ngFor="let listarProfessor of professores" routerLink='/professor-detalhes/{{listarProfessor.id}}'>
+    <img src="assets/giovani.jpg" id="imagem" />
+
+    <ion-card-header>
+      <ion-card-subtitle>{{listarProfessor.materia}}</ion-card-subtitle>
+      <ion-card-title>{{listarProfessor.nome}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{listarProfessor.descricao}}
+      <ion-button expand="block" slot="end">Ver Horários</ion-button>
+    </ion-card-content>
+  </ion-card>
+  <!-- </ion-item> -->
+</ion-content>
